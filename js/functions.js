@@ -172,6 +172,15 @@ var ans = [
           ];
 
 
+function scroll() {
+  $(".messages").each( function(){
+     // certain browsers have a bug such that scrollHeight is too small
+     // when content does not fill the client area of the element
+     var scrollHeight = Math.max(this.scrollHeight, this.clientHeight) + 20;
+     this.scrollTop = scrollHeight - this.clientHeight;
+  });
+}
+
 function draw(m1, a1, a2, s1, s2 ) {
   delay = mess[m1].length * 50;
   console.log(delay);
@@ -190,6 +199,7 @@ function draw(m1, a1, a2, s1, s2 ) {
     $('.messages').append('<div class="p1"><div class="text"><p>'+ mess[m1] +'</p></div><div class="time"><p>'+time+'</p></div></div>');
     $('.a1').append('<a onclick="change_state('+s1+', '+a1+')"><p>'+ ans[a1] +'</p></a>');
     $('.a2').append('<a onclick="change_state('+s2+', '+a2+')"><p>'+ ans[a2] +'</p></a>');
+    scroll();
   }, delay);
 }
 
@@ -401,8 +411,10 @@ function change_state(x , y) {
   $('.a1>a').remove();
   $('.a2>a').remove();
   $('.messages').append('<div class="p2"><div class="text"><p>'+ ans[y] +'</p></div><div class="time"><p>'+time+'</p></div></div>');
+  scroll();
   setTimeout(function () {
     $('.messages').append('<div class="p1 loader" style="width: 30%"><div class="text"><img src="img/loader.GIF"></div></div>');
+    scroll();
   }, 1000);
 
   run();

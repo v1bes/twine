@@ -822,8 +822,7 @@ body {
       padding: 10px 20px;
       margin-bottom: 10px;
       border-radius: 25px;
-      max-width: 80%;
-      min-width: 21%; }
+      width: 80%; }
       .wrapper .messages .p1 p, .wrapper .messages .p2 p {
         margin: 0; }
     .wrapper .messages .p1 {
