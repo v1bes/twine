@@ -669,11 +669,16 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 /*=====================================================================// */
+::-moz-selection {
+  background: #FFF498; }
 ::selection {
   background: #FFF498; }
 
 ::-moz-selection {
   background: #FFF498; }
+
+img::-moz-selection {
+  background: transparent; }
 
 img::selection {
   background: transparent; }
@@ -768,13 +773,17 @@ hr {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 body {
-<<<<<<< HEAD
+  background: -webkit-linear-gradient(250deg, #785549, #512526);
   background: linear-gradient(200deg, #785549, #512526);
-=======
-  background: -webkit-linear-gradient(left, #f1f2b5, #135058);
-  background: linear-gradient(to right, #f1f2b5, #135058);
->>>>>>> origin/master
   height: 100vh; }
+
+.bg {
+  background-image: url("../img/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.3; }
 
 .wrapper {
   max-width: 414px;
@@ -787,20 +796,22 @@ body {
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   overflow: hidden;
   border-radius: 3px;
-  box-shadow: 0px 16px 40px -6px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0px 16px 40px -16px rgba(0, 0, 0, 0.3); }
   .wrapper .top {
     width: 100%;
     height: 50px;
-    background-color: rgba(238, 238, 238, 0.9);
+    background-color: #6c9865;
     box-shadow: 0px 3px 30px -10px rgba(0, 0, 0, 0.4); }
     .wrapper .top h1 {
       margin: 0;
       font-size: 30px;
       text-align: center;
-      line-height: 50px; }
+      line-height: 50px;
+      color: #512526; }
   .wrapper .messages {
     width: 100%;
     overflow: scroll;
@@ -811,7 +822,8 @@ body {
       padding: 10px 20px;
       margin-bottom: 10px;
       border-radius: 25px;
-      max-width: 80%; }
+      max-width: 80%;
+      min-width: 21%; }
       .wrapper .messages .p1 p, .wrapper .messages .p2 p {
         margin: 0; }
     .wrapper .messages .p1 {
@@ -842,14 +854,11 @@ body {
       .wrapper .messages .p1 img {
         width: 100%;
         border-radius: 10px; }
-      .wrapper .messages .p1 .time p {
-        color: #b3b2b2; }
     .wrapper .messages .p2 {
-      background-color: #d49a49;
+      background-color: #a15454;
       float: right;
       color: white;
-      position: relative;
-      text-align: right; }
+      position: relative; }
       .wrapper .messages .p2:before {
         content: "";
         position: absolute;
@@ -857,7 +866,7 @@ body {
         bottom: -2px;
         right: -7px;
         height: 20px;
-        border-right: 20px solid #d49a49;
+        border-right: 20px solid #a15454;
         border-bottom-left-radius: 16px 14px;
         -webkit-transform: translate(0, -2px); }
       .wrapper .messages .p2:after {
@@ -871,8 +880,6 @@ body {
         background: white;
         border-bottom-left-radius: 10px;
         -webkit-transform: translate(-30px, -2px); }
-      .wrapper .messages .p2 .time p {
-        color: #946523; }
   .wrapper .answer {
     height: 200px;
     width: 100%;
@@ -880,10 +887,10 @@ body {
     bottom: 0;
     position: fixed;
     padding: 20px;
-    background-color: #785549;
+    background-color: #959595;
     border-top: solid 2px #6c9865; }
     .wrapper .answer .a1, .wrapper .answer .a2 {
-      background-color: #0B93F6;
+      background-color: #a15454;
       width: 100%;
       padding: 10px 20px;
       margin-bottom: 10px;
@@ -891,9 +898,47 @@ body {
       color: white;
       font-size: 18px;
       background: #457fca;
-      background: linear-gradient(to top, #4d608e, #8eb1be);
+      background: -webkit-linear-gradient(bottom, #a15454, #d97c5e);
+      background: linear-gradient(to top, #a15454, #d97c5e);
       cursor: pointer; }
       .wrapper .answer .a1 p, .wrapper .answer .a2 p {
         margin: 0; }
       .wrapper .answer .a1 a, .wrapper .answer .a2 a {
         color: white; }
+
+main {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw; }
+  main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-40%) translateX(-50%);
+            transform: translateY(-40%) translateX(-50%); }
+    main ul a {
+      color: #e8d3b8;
+      display: block;
+      text-align: center;
+      font-size: 40px;
+      padding: 10px 40px;
+      margin-bottom: 20px;
+      background-color: #a1483e;
+      -webkit-transition: 300ms;
+      transition: 300ms; }
+      main ul a:hover {
+        color: #e8d3b8;
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05); }
+    main ul a.start {
+      background-color: #617654;
+      -webkit-transform: scale(1.15);
+              transform: scale(1.15); }
+      main ul a.start:hover {
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2); }
