@@ -774,7 +774,8 @@ hr {
 
 body {
   background: -webkit-linear-gradient(left, #f1f2b5, #135058);
-  background: linear-gradient(to right, #f1f2b5, #135058); }
+  background: linear-gradient(to right, #f1f2b5, #135058);
+  height: 100vh; }
 
 .wrapper {
   max-width: 414px;
