@@ -669,16 +669,11 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 /*=====================================================================// */
-::-moz-selection {
-  background: #FFF498; }
 ::selection {
   background: #FFF498; }
 
 ::-moz-selection {
   background: #FFF498; }
-
-img::-moz-selection {
-  background: transparent; }
 
 img::selection {
   background: transparent; }
@@ -773,8 +768,8 @@ hr {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 body {
-  background: -webkit-linear-gradient(left, #f1f2b5, #135058);
-  background: linear-gradient(to right, #f1f2b5, #135058); }
+  background: linear-gradient(200deg, #785549, #512526);
+  height: 100vh; }
 
 .wrapper {
   max-width: 414px;
@@ -787,11 +782,10 @@ body {
   position: fixed;
   left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
   overflow: hidden;
   border-radius: 3px;
-  box-shadow: 0px 16px 40px -16px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0px 16px 40px -6px rgba(0, 0, 0, 0.5); }
   .wrapper .top {
     width: 100%;
     height: 50px;
@@ -812,7 +806,7 @@ body {
       padding: 10px 20px;
       margin-bottom: 10px;
       border-radius: 25px;
-      width: 80%; }
+      max-width: 80%; }
       .wrapper .messages .p1 p, .wrapper .messages .p2 p {
         margin: 0; }
     .wrapper .messages .p1 {
@@ -843,11 +837,14 @@ body {
       .wrapper .messages .p1 img {
         width: 100%;
         border-radius: 10px; }
+      .wrapper .messages .p1 .time p {
+        color: #b3b2b2; }
     .wrapper .messages .p2 {
-      background-color: #0B93F6;
+      background-color: #d49a49;
       float: right;
       color: white;
-      position: relative; }
+      position: relative;
+      text-align: right; }
       .wrapper .messages .p2:before {
         content: "";
         position: absolute;
@@ -855,7 +852,7 @@ body {
         bottom: -2px;
         right: -7px;
         height: 20px;
-        border-right: 20px solid #0B93F6;
+        border-right: 20px solid #d49a49;
         border-bottom-left-radius: 16px 14px;
         -webkit-transform: translate(0, -2px); }
       .wrapper .messages .p2:after {
@@ -869,6 +866,8 @@ body {
         background: white;
         border-bottom-left-radius: 10px;
         -webkit-transform: translate(-30px, -2px); }
+      .wrapper .messages .p2 .time p {
+        color: #946523; }
   .wrapper .answer {
     height: 200px;
     width: 100%;
@@ -876,8 +875,8 @@ body {
     bottom: 0;
     position: fixed;
     padding: 20px;
-    background-color: #e9e9e9;
-    border-top: solid 2px #f5ccec; }
+    background-color: #785549;
+    border-top: solid 2px #6c9865; }
     .wrapper .answer .a1, .wrapper .answer .a2 {
       background-color: #0B93F6;
       width: 100%;
@@ -887,8 +886,7 @@ body {
       color: white;
       font-size: 18px;
       background: #457fca;
-      background: -webkit-linear-gradient(top, #0B93F6, #457fca);
-      background: linear-gradient(to bottom, #0B93F6, #457fca);
+      background: linear-gradient(to top, #4d608e, #8eb1be);
       cursor: pointer; }
       .wrapper .answer .a1 p, .wrapper .answer .a2 p {
         margin: 0; }
