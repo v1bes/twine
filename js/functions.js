@@ -28,7 +28,43 @@ var mess = ["Ich bin auf einer Raumstation gefangen und habe es anscheinend endl
             "#nofilter",
             "Zum Zentral-PC, der ist nicht weit von hier.",
             "Achso ja, das hätte ich vielleicht erwähnen sollen.",
+<<<<<<< Updated upstream
             ""
+=======
+            "",
+            "Das ist ein bisschen kompliziert. Ich wurde hier von der ISRO (Indische Raumfahrtorganisation) her gebracht.. Es ist eigentlich Top Secret, aber ich glaube in meiner aktuellen Situation sollte ich vielleicht alle Infos mit dir Teilen.. Zwei Köpfe sind besser als einer. Also.. kurz gesagt: Der erste Kontakt steht bevor. Indische Wissenschaftler haben es geschafft mit einem Strahlenbeschleuniger Kontakt mit Etwas aufzunehmen. Es oder Sie sind seit mehreren Jahren auf den Weg hier her. Sie kommen aus 'Cosmos Redshift 7'. Ich glaube den paranoiden Anführeren unserer Welt war es sehr wichtig eine friedliche Begegnung zu ermöglichen. Darum bin ich hier. ",
+            "Wir konnten ihre Ankunft nur auf ein Zeitfenster von 4 Tagen berechnen. Sie könnten jeden Moment ankommen, und hier läuft gerade alles schief..",
+            "Darüber hab ich noch nicht nachgedacht.. Du meinst die Aliens könnten hier alles lahm gelegt haben?",
+            "",
+            "Hilfe, mein Raumanzug hat ein Loch!",
+            "Ich bewege mich gerade langsam die Außenhülle der Raumstation entlang. Ich muss extrem aufpassen nicht den Halt zu verlieren.. Ich müsste gleich bei der nächsten Raumschleuse sein.. Warte mal kurz! Leise!",
+            "Ok, bin wieder da. Da war gerade irgend was. Es war glänzend Schwarz.",
+            "Verdammt, sie haben mich gehörlkjhvcx",
+            "Okay ich bin drin.. Oh.. Verdammt.. Hier ist alle voller Gedärme.. Schaut so aus als hätte er seinen Raumanzug nicht schnell genug angezogen..",
+            "Verdammt, mein Anzug brennt!!!",
+            "So makaber es ist.. Ja. Ich nehme mir seine Sauerstofftanks.",
+            " ",
+            "Glaubst du dass kann ich jetzt an den Gedärmen erkennen?",
+            " ",
+            "Meine Sauerstoff-Reserven sind jetzt zumindest wieder bei 42%. Ich glaub ich kann von hier aus zur Haupt-Schleuse laufen. Dort war die erste Begegnung geplant, wenn nicht alles ausgefallen wäre. Soll ich weiter oder mich lieber noch ein bisschen Umschauen?",
+            "Okay.. Hier scheint eine Art Satellit in die Außenwand eingebaut zu sein.. Zwei orange Knöpfe leuchten noch. Es scheint russisch zu sein.. Hier steht 'Прямой эфир' und 'ад'. Was soll ich drücken?",
+            "Ok. Ich bin mir nicht sicher ob das jetzt etwas ausgelöst hat. Aber jetzt leuchten keine Knöpfe mehr. Was jetzt? Hier gibt es eine Luke, zum 'Punkt der ersten Begegnung' oder zum 'Maschinenraum'?",
+            "Hm. Hier ist es ziemlich dunkel. Ich höre aber noch ein leises Surren. Hier ist es feucht.. Moment.. Wasser? Das ist nicht gut!",
+            "Oh nein.. Ich glaube das ist nicht gut...  hier steht 'Ад наступит'....   'ад' bedeutet Hölle!",
+            "OK, hör mal, ich bin gerade jemandem begegnet. Sein name ist 'Kek'. Er spricht Englisch mit Arabischem Akzent. Ich hätte nicht erwartet hier noch jemandem zu Begegnen. Er sieht aus, als ob er schon sehr lange in der Schwerelosigkeit lebt. Trotzdem ist er ganz klar ein Mensch. Und hier kommt das Merkwürdige: Er gibt sich als Botschafter des المملكة المصرية aus. Er sagt er sei Teil eines Todes-Heimats-Komandos. Er hat mir stichhaltig anhand von wissenschaftlichen Fakten erklärt, dass die alten Ägypter die Erde schon vor tausenden von Jahren aufgrund einer Diktator-AI verlassen hatten. Sie haben für mehr als 3.000 Jahre in der 'Cosmos Redshift 7' Galaxie gelebt, und dort eine 3 Klassen Gesellschaft mit vielen Pyramiden etabliert. Seitdem Abtreibung bestraft wird leiden alle bewohnbaren Planeten an Überbevölkerung, und nun sei es Zeit, wieder nach Hause zu kommen. Einen homo-sapiens vernichtenden Todestrahl haben sie auch dabei. Und jetzt?",
+            " ",
+            "Er sagt: Dieser Planet ist nicht groß genug für uns beide.",
+            "Die  المملكة المصرية können nicht nachvollziehen was wir auf der Erde veranstaltet haben, seit sie Weg sind. Besonders die Deutschen und Amerikaner hätten sich Fehlverhalten. Er bietet an nur Amerikaner und Deutsche zu töten.",
+            "Kek sagt, dass das was sie die  المملكة المصرية am meisten aufregt, die hässliche Architektur von uns sei. Besonders alle vertikalen parallelen seien eine Schande. Ich weiß nicht genau was er meint.",
+            "Ich glaube das hat einen interplanetaren Krieg ausgelöst...",
+            "Ich glaube sie haben zuerst auf Dresden gezielt.. Tut mir leid.",
+            "Die Idee findet 'Kek' ganz gut. Ich soll ihm in einen anderen Raum foglen.",
+            "Hier hat ein riesiges schwarzes Tarnschiff angedockt! Sie waren schon die ganze Zeit über hier, und haben mich getestet.",
+            "Kek insistiert.",
+            "Da hast du Recht. Ägypter passen Design-Mäßig einfach gut in den Weltraum. Vor mir sitzt 'Snofru' der Pharao! Er sollte seit 4.500 Jahren Tod sein.. Verrückt oder? ",
+            "Das fand er nicht so lustig.. ",
+            " "
+>>>>>>> Stashed changes
            ];
 var ans = [
             "Ja",
@@ -76,7 +112,11 @@ var ans = [
 
 function draw(m1, a1, a2, s1, s2 ) {
   delay = mess[m1].length * 50;
+<<<<<<< Updated upstream
   console.log(delay);
+=======
+  console.log(state);
+>>>>>>> Stashed changes
   setTimeout(function () {
     var d = new Date();
     var hours = d.getHours();
@@ -95,13 +135,16 @@ function draw(m1, a1, a2, s1, s2 ) {
   }, delay);
 }
 
-
-console.log(state);
-
 function run(){
 
   if (state === 9999) {
+<<<<<<< Updated upstream
 
+=======
+    console.log(state);
+    $('.loader').remove();
+    $('body').append('<img src"img/img01.jpg">');
+>>>>>>> Stashed changes
   }
 
   if (state === 1) {
