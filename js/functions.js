@@ -8,6 +8,11 @@ var hours = d.getHours();
     hours = "0" + hours;
   }
 
+setTimeout(function () {
+  $('.messages').append('<div class="p1 loader" style="width: 30%"><div class="text"><img src="img/loader.GIF"></div></div>');
+  scroll();
+}, 1000);
+
 var mess = ["Ich bin auf einer Raumstation gefangen und habe es anscheinend endlich geschafft Kontakt zu jemandem auf Erde aufzunehmen. Arbeitest du bei der NASA?",
             "Okay, sehr gut. Du musst mir helfen. ISRO, die Organisation, die mich hier rauf geschickt hat wurde soeben von Hackern angegriffen. Ihr ganzes Netzwerk ist ausgefallen.",
             "Schade.... Wer bist du?",
@@ -176,14 +181,14 @@ function scroll() {
   $(".messages").each( function(){
      // certain browsers have a bug such that scrollHeight is too small
      // when content does not fill the client area of the element
-     var scrollHeight = Math.max(this.scrollHeight, this.clientHeight) + 20;
+     var scrollHeight = Math.max(this.scrollHeight, this.clientHeight) + 50;
      this.scrollTop = scrollHeight - this.clientHeight;
   });
 }
 
 function draw(m1, a1, a2, s1, s2 ) {
   delay = mess[m1].length * 50;
-  console.log(delay);
+  console.log(state);
   setTimeout(function () {
     var d = new Date();
     var hours = d.getHours();
@@ -204,13 +209,14 @@ function draw(m1, a1, a2, s1, s2 ) {
 }
 
 
-console.log(state);
-
 function run(){
 
   if (state === 9999) {
-    $('.loader').remove();
-    $('body').append('<img src"img/img01.jpg">');
+    console.log('game over');
+    setTimeout(function () {
+      $('.loader').remove();
+      $('.messages').append('<div class="p1"><div class="text"><p>GAME OVER</p></div></div>');
+    }, 1000);
   }
 
   if (state === 1) {
@@ -280,10 +286,12 @@ function run(){
   }
   if (state === 18) {
     setTimeout(function () {
-      $('.loader').remove();
       $('.messages').append('<div class="p1"><div class="text"><img src="img/img01.jpg"></div></div>');
     }, 300);
     draw(17, 35, 34, 20, 27);
+    setTimeout(function () {
+      $('.loader').remove();
+    }, 1000);
   }
   if (state === 19) {
     draw(18, 36, 37, 22, 22);
