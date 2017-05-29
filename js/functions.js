@@ -82,7 +82,7 @@ var ans = [
             "Versuch mal den PC zu starten und drück F13 beim booten. Sollte NASA-Standart sein.",
             "Kannst du sie manuell öffnen?",
             "Ist das der einzige Weg nach draußen?",
-            "Ehrlich gesagt arbeite ich gar nicht bei der NASA. Ich weiß nicht, was diese begriffe bedeuten.",
+            "Ich weiß nicht, was diese begriffe bedeuten.",
             "Versuch es mal mit dem RTXv420.",
             "Na gut, wie ist die Lage?",
             "Nein ernsthaft, ich habe Feierabend. Lass dir von wem anderen helfen. Es ist schon nach "+hours+" Uhr!",
@@ -215,7 +215,8 @@ function run(){
     console.log('game over');
     setTimeout(function () {
       $('.loader').remove();
-      $('.messages').append('<div class="p1"><div class="text"><p>GAME OVER</p></div></div>');
+      //$('.messages').append('<div class="p1"><div class="text"><p>GAME OVER</p></div></div>');
+      $('.gameover').css({'display': 'block', 'animation': 'bgshow 1s forwards'});
     }, 1000);
   }
 
@@ -399,6 +400,11 @@ function run(){
   if (state === 53) {
     //end
     draw(52, 104, 105, 8888, 8888);
+    setTimeout(function () {
+      $('.loader').remove();
+      //$('.messages').append('<div class="p1"><div class="text"><p>GAME OVER</p></div></div>');
+      $('.win').css({'display': 'block', 'animation': 'bgshow 1s forwards'});
+    }, 1000);
   }
 
 }
@@ -429,3 +435,34 @@ function change_state(x , y) {
 }
 
 run();
+
+
+$(function() {
+  "use strict";
+    // grab the initial top offset of the navigation
+    var sticky_navigation_offset_top = $('.about').offset().top - 220;
+
+    // our function that decides weather the navigation bar should have "fixed" css position or not.
+    var sticky_navigation = function(){
+        var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+
+        // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+        // otherwise change it back to relative
+        if (scroll_top > sticky_navigation_offset_top) {
+          console.log("test1");
+          $('.bg2').css({ 'animation': 'bghide 1s forwards'});
+        } else {
+          $('.bg2').css({ 'animation': 'bgshow 1s forwards'});
+
+        }
+    };
+
+    // run our function on load
+    sticky_navigation();
+
+    // and run it again every time you scroll
+    $(window).scroll(function() {
+         sticky_navigation();
+    });
+
+});
