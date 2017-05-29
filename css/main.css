@@ -670,16 +670,11 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 /*=====================================================================// */
-::-moz-selection {
-  background: #FFF498; }
 ::selection {
   background: #FFF498; }
 
 ::-moz-selection {
   background: #FFF498; }
-
-img::-moz-selection {
-  background: transparent; }
 
 img::selection {
   background: transparent; }
@@ -775,7 +770,6 @@ hr {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 body {
-  background: -webkit-linear-gradient(250deg, #785549, #512526);
   background: linear-gradient(200deg, #785549, #512526);
   height: 100vh; }
 
@@ -798,8 +792,7 @@ body {
   position: fixed;
   left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
   overflow: hidden;
   border-radius: 3px;
   box-shadow: 0px 16px 40px -16px rgba(0, 0, 0, 0.3); }
@@ -899,7 +892,6 @@ body {
       color: white;
       font-size: 18px;
       background: #457fca;
-      background: -webkit-linear-gradient(bottom, #a15454, #d97c5e);
       background: linear-gradient(to top, #a15454, #d97c5e);
       cursor: pointer; }
       .wrapper .answer .a1 p, .wrapper .answer .a2 p {
@@ -920,8 +912,7 @@ main {
     position: fixed;
     left: 50%;
     top: 50%;
-    -webkit-transform: translateY(-40%) translateX(-50%);
-            transform: translateY(-40%) translateX(-50%); }
+    transform: translateY(-40%) translateX(-50%); }
     main ul a {
       color: #e8d3b8;
       display: block;
@@ -930,18 +921,14 @@ main {
       padding: 10px 40px;
       margin-bottom: 20px;
       background-color: #a1483e;
-      -webkit-transition: 300ms;
       transition: 300ms; }
       main ul a:hover {
-        -webkit-transform: scale(1.05);
-                transform: scale(1.05); }
+        transform: scale(1.05); }
     main ul a.start {
       background-color: #617654;
-      -webkit-transform: scale(1.15);
-              transform: scale(1.15); }
+      transform: scale(1.15); }
       main ul a.start:hover {
-        -webkit-transform: scale(1.2);
-                transform: scale(1.2); }
+        transform: scale(1.2); }
 
 .space {
   width: 100%;
@@ -975,23 +962,11 @@ main {
       font-size: 28px;
       font-weight: 100; }
 
-@-webkit-keyframes bghide {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
 @keyframes bghide {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
-
-@-webkit-keyframes bgshow {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 
 @keyframes bgshow {
   0% {
@@ -1044,16 +1019,51 @@ main {
     padding: 10px 40px;
     margin-bottom: 20px;
     background-color: #6c9865;
-    -webkit-transition: 300ms;
     transition: 300ms; }
     .gameover a:hover, .win a:hover {
-      -webkit-transform: scale(1.05);
-              transform: scale(1.05); }
+      transform: scale(1.05); }
 
 .back {
   width: 320px;
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-40%) translateX(-50%);
-          transform: translateY(-40%) translateX(-50%); }
+  transform: translateY(-40%) translateX(-50%); }
+
+@keyframes scrolltop {
+  from {
+    transform: translateY(100%); }
+  to {
+    transform: translateY(-100%); } }
+
+main .transp {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 30%;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 40px 200px #512526;
+  z-index: 3; }
+
+main section.credits {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  animation: scrolltop 20s linear;
+  transform: translateY(-100%); }
+  main section.credits::after {
+    clear: both;
+    content: "";
+    display: table; }
+  main section.credits h1, main section.credits h2 {
+    color: #e8d3b8; }
+  main section.credits h1 {
+    margin-top: 0; }
+  main section.credits ul {
+    position: relative;
+    top: auto;
+    color: #cc8279;
+    font-size: 1.5em; }
